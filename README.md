@@ -1,7 +1,7 @@
-<!-- [原文地址](https://github.com/sing1/NewbieGuide) -->
+<!-- [原文地址](https://github.com/android-open-libs/NewbieGuide) -->
 
 
-[![](https://jitpack.io/v/sing1/NewbieGuide.svg)](https://jitpack.io/#sing1/NewbieGuide)
+[![](https://jitpack.io/v/android-open-libs/NewbieGuide.svg)](https://jitpack.io/#android-open-libs/NewbieGuide)
 
 # NewbieGuide
 Android 快速实现新手引导层的库
@@ -14,12 +14,12 @@ Android 快速实现新手引导层的库
 
 改变高亮view的尺寸，并不用调整显示引导层的代码
 
-![sample](https://github.com/sing1/NewbieGuide/raw/master/screenshoot/device-2017-08-09-161703.png)
-![sample](https://github.com/sing1/NewbieGuide/raw/master/screenshoot/change_size.png)
+![sample](https://github.com/android-open-libs/NewbieGuide/raw/master/screenshoot/device-2017-08-09-161703.png)
+![sample](https://github.com/android-open-libs/NewbieGuide/raw/master/screenshoot/change_size.png)
 
 引导层的xml可以完全自定义，想怎样显示就怎样显示
 
-![sample](https://github.com/sing1/NewbieGuide/raw/master/screenshoot/shape_dialog.png)
+![sample](https://github.com/android-open-libs/NewbieGuide/raw/master/screenshoot/shape_dialog.png)
 
 ## 导入
 
@@ -29,8 +29,8 @@ Android 快速实现新手引导层的库
 allprojects {
     repositories {
         ...
-		maven { url 'https://jitpack.io' }
-	}
+        maven { url 'https://jitpack.io' }
+    }
 }
 ```
 
@@ -38,7 +38,7 @@ module的build.gradle添加
 
 ```
 dependencies {
-  implementation 'com.github.sing1:NewbieGuide:v1.0.1'
+    implementation 'com.github.android-open-libs:NewbieGuide:v1.0.1'
 }
 ```
 
@@ -57,7 +57,7 @@ NewbieGuide.with(activity)
 
 通过链式调用，一行代码即可实现引导层的显示，来看下效果：
 
-![simple use](https://github.com/sing1/NewbieGuide/raw/master/screenshoot/simple_use.png)
+![simple use](https://github.com/android-open-libs/NewbieGuide/raw/master/screenshoot/simple_use.png)
 
 其中：
 
@@ -177,7 +177,7 @@ NewbieGuide.with(activity)
 
 我所采用的方式是将说明内容通过xml的方式，自定义摆放位置。使得说明内容高度自定义，不管你是简单的图片，还是对话框类型的都可以。
 
-![like dialog](https://github.com/sing1/NewbieGuide/raw/master/screenshoot/shape_dialog.png)
+![like dialog](https://github.com/android-open-libs/NewbieGuide/raw/master/screenshoot/shape_dialog.png)
 
 ```
 GuidePage.newInstance()
@@ -217,7 +217,7 @@ setLayoutRes在下层，多个RelativeGuide按照添加顺序依次添加。
 
 各个方向的对齐方式如下图所示：
 
-![sample](https://github.com/sing1/NewbieGuide/raw/master/screenshoot/relative_default_gravity.png)
+![sample](https://github.com/android-open-libs/NewbieGuide/raw/master/screenshoot/relative_default_gravity.png)
 
 如Gravity.LEFT 的top与高亮view的top对齐，如果想改变，可以通过在传入布局的根布局添加marginTop。
 或者还可以继承RelativeGuide并复写offsetMargin方法修改位置，具体细节可查看RelativeGuide类。
@@ -261,7 +261,7 @@ NewbieGuide.with(FirstActivity.this)
 ```
 这里实现了具体显示引导层。
 
-![anchor](https://github.com/sing1/NewbieGuide/raw/master/screenshoot/anchor.png)
+![anchor](https://github.com/android-open-libs/NewbieGuide/raw/master/screenshoot/anchor.png)
 
 引导层其实是一个FrameLayout，设置anchor之后，引导层的大小就与anchor所占的位置相同。默认是android.R.id.content。setLayoutRes方法设置的说明布局则会添加到引导层的FrameLayout中。
 
