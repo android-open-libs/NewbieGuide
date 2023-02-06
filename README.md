@@ -2,7 +2,7 @@
 
 [![](https://jitpack.io/v/sing1/NewbieGuide.svg)](https://jitpack.io/#sing1/NewbieGuide)
 
-[![](https://github.com/android-open-libs/NewbieGuide/raw/master/screenshoot/device-2017-08-09-161703.png)](https://jitpack.io/#android-open-libs/NewbieGuide)
+[![](https://jitpack.io/v/android-open-libs/NewbieGuide.svg)](https://jitpack.io/#android-open-libs/NewbieGuide)
 
 # NewbieGuide
 Android 快速实现新手引导层的库
